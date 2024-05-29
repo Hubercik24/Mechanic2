@@ -1,0 +1,122 @@
+<html lang="pl">
+<head>
+    <title>MENU</title>
+    <meta charset="UTF-8"/>
+    <style>
+    
+        body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background-image: url('south-tyrol-3740524_1280.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            animation: change 40s infinite;
+            animation-duration: 30s;
+            font-family:Snell Roundhand, cursive;
+        }
+        .typewriter h1 {
+            color: #fff;
+            font-family: monospace;
+            border-right: .15em solid #ffffff;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 left; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .3em; /* Adjust as needed */
+            animation: 
+                typing 5.5s steps(60, end),
+                blink-caret 4.3s ;
+            text-align: left;
+            }
+        #h1a{
+            color:#ffffff;
+            font-size: 60px;
+        }
+        #current-time{
+            font-size: 40px;
+            color:white;
+            font-family:Snell Roundhand, cursive;
+            position:absolute;
+            left: 1680px;
+            right:auto;
+            bottom: 0px;
+            color: #FF0000;
+        }
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 54% }
+}
+@keyframes blink-caret {
+  from, to { border-color:none }
+  10% { border-color: rgb(255, 0, 0) }
+}
+        @keyframes change{
+            0%
+            {
+            background-image: url("istockphoto-1409304203-612x612.jpg");
+
+            }
+            20%
+            {
+                background-image: url("hdr-1079980_1280.jpg");
+            }
+            40%{
+                background-image: url("car-7635511_640.webp");
+            }
+            60%{
+                background-image: url("city-5382718_960_720.jpg");
+            }
+            80%{
+                background-image: url("city-5382691_960_720.jpg");
+            }
+            100%{
+                background-image: url("lamborghini-4780519_1280.jpg");
+            }    
+        
+        }    
+
+    </style>
+
+
+</head>
+<body>
+    <div class="typewriter">
+        <h1 id="h1a">Hubix and Ciapaty Sercise... </h1>
+      </div>
+      <h1 id="current-time">12:00:00</h1>
+    </div>
+
+
+</body>
+<script>
+    let time = document.getElementById("current-time")
+
+        setInterval(() => {
+            let d = new Date();
+    time.innerHTML = d.toLocaleTimeString();
+        })
+    ;
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
